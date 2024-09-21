@@ -125,6 +125,7 @@ def check_collisions(snake):
 
 # Ends game and prompts Game Over screen
 def game_over():
+    global restart_button
     canvas.delete(ALL)
     canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2,
                        font=('comic sans',70), text="GAME OVER", fill="red", tag="gameover")
@@ -134,7 +135,7 @@ def game_over():
 
 # Creates button that resets the game if pressed
 def restart_game():
-    global snake, food, score, direction, restart_button
+    global snake, food, score, direction
 
     canvas.delete(ALL)
     snake = Snake()
